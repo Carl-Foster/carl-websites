@@ -7,9 +7,12 @@
   align-items: center;
 }
 
-.container img {
+.container > img {
   max-width: 460px;
   max-height: 460px;
+}
+
+img {
   animation-duration: 1s;
   animation-iteration-count: infinite;
   animation-name: rotate;
@@ -24,4 +27,32 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(100vw);
+  }
+}
+
+.image {
+  position: absolute;
+  height: 100vh;
+  left: -50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  animation-name: slide;
+  animation-iteration-count: infinite;
+  animation-duration: 2s;
+  animation-direction: alternate;
+  animation-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+.image img {
+  max-height: 100px;
 }
