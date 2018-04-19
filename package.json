@@ -6,6 +6,7 @@
     "build:bigbrain": "cd bigbraincarl && npm run build",
     "build:pictures": "cd picturesofcarl && npm run build",
     "build": "run-p build:*",
+    "docker:build": "docker build . -t carl-websites; ./dev.sh",
     "install:bigbrain": "cd bigbraincarl && npm install",
     "install:picturesofcarl": "cd picturesofcarl && npm install",
     "install": "run-p install:*",
