@@ -4,8 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "parcel serve",
-    "build": "parcel build",
+    "start": "parcel serve index.html",
+    "clean": "rm -rf dist",
+    "prebuild": "npm run clean",
+    "build": "parcel build index.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
