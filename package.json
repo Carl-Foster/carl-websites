@@ -1,0 +1,28 @@
+{
+  "name": "carl-websites",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build:bigbrain": "cd bigbraincarl && npm run build",
+    "build:pictures": "cd picturesofcarl && npm run build",
+    "build": "run-s build:*",
+    "install:bigbrain": "cd bigbraincarl && npm install",
+    "install:picturesofcarl": "cd picturesofcarl && npm install",
+    "install": "run-s install:*",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carl-foster/carl-websites.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/carl-foster/carl-websites/issues"
+  },
+  "homepage": "https://github.com/carl-foster/carl-websites#readme",
+  "dependencies": {
+    "npm-run-all": "^4.1.2"
+  }
+}
