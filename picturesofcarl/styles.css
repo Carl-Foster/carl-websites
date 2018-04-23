@@ -28,37 +28,13 @@
   flex: 1;
 }
 
+.spinners > img {
+  flex: 1;
+  object-fit: scale-down;
+}
+
 img.main { 
   height: 50%;
-}
-
-img.medium {
-  height: 25%;
-}
-
-img.small {
-  height: 10%;
-  position: absolute;
-}
-
-.top-left {
-  top: 0;
-  left: 0;
-}
-
-.top-right {
-  top: 0;
-  right: 0;
-}
-
-.bottom-right {
-  bottom: 0;
-  right: 0;
-}
-
-.bottom-left {
-  bottom: 0;
-  left: 0;
 }
 
 .spinning {
@@ -68,6 +44,12 @@ img.small {
   animation-timing-function: linear;
 }
 
+.pulsate {
+  animation-name: pulsate;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
 @keyframes spinning {
   from {
     transform: rotate(0deg);
@@ -75,5 +57,19 @@ img.small {
 
   to {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes pulsate {
+  0% {
+    transform: scale(0.8, 0.8);
+  }
+
+  50% {
+    transform: scale(1.2, 1.2);
+  }
+
+  100% {
+    transform: scale(0.8, 0.8);
   }
 }
