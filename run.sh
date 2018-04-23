@@ -1,6 +1,6 @@
-sudo docker pull carlfoster/carl-websites
-sudo docker stop $(sudo docker ps -q)
-sudo docker run \
+docker pull carlfoster/carl-websites
+docker stop $(docker ps -q)
+docker run \
   -d --rm \
   -v "$HOME/certs/bigbraincarl.com/fullchain1.pem:/certs/bigbraincarl.com.pem" \
   -v "$HOME/certs/bigbraincarl.com/privkey1.pem:/certs/bigbraincarl.com.key.pem" \

@@ -2,8 +2,11 @@
   "name": "deploy-hook",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
+    "compile": "parcel build index.ts --target node",
+    "prestart": "npm run compile",
+    "start": "pm2 start dist/index.js --name deploy --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -12,5 +15,8 @@
   "devDependencies": {
     "@types/node": "^9.6.6",
     "typescript": "^2.8.3"
+  },
+  "dependencies": {
+    "pm2": "^2.10.2"
   }
 }

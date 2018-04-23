@@ -4,6 +4,8 @@ import { join } from "path";
 
 const server = createServer((req, res) => {
     if (req.method === 'POST') {
-        execFileSync(join(__dirname, '../run.sh'));
+        execFileSync(join(__dirname, '../../run.sh'));
     }
+
+    res.end();
 }).listen(3000);
