@@ -1,3 +1,6 @@
+body {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
 .container {
   margin: 0;
   padding: 0;
@@ -21,11 +24,22 @@
   flex: 1;
 }
 
+.heading h1 {
+  font-size: 3.5em;
+  animation: rainbow infinite 3s ease-in-out alternate;
+  text-shadow: 0 0 2px black;
+}
+
 .spinners {
   width: 100%;
   display: flex;
   justify-content: space-evenly;
   flex: 1;
+}
+
+.finished {
+  transform: rotate(180deg);
+  filter: grayscale(100%) blur(5px);
 }
 
 .spinners > img {
@@ -71,5 +85,40 @@ img.main {
 
   100% {
     transform: scale(0.8, 0.8);
+  }
+}
+
+@keyframes rainbow {
+  0% {
+    color: purple;
+    transform: skewY(10deg) scale(0.8, 0.8);
+  }
+
+  20% {
+    color: blue;
+  }
+
+  40% {
+    color: green;
+    transform: scale(1.2, 1.2);
+  }
+
+  50% {
+    font-size: 3.5em;
+    transform: skewY(-10deg);
+  }
+
+  60% {
+    color: yellow;
+    transform: scale(0.8, 0.8);
+  }
+
+  80% {
+    color: orange;
+  }
+
+  100% {
+    color: red;
+    transform: skewY(10deg) scale(1.2, 1.2);
   }
 }

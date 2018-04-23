@@ -1,5 +1,6 @@
 #!/usr/bin/bash
 
+docker pull carlfoster/carl-websites
 docker kill carl-websites || true
 docker rm carl-websites || true
 docker run \
